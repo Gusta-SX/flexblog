@@ -1,7 +1,7 @@
 # FlexBlog
 
 ## Sobre
-Esse projeto foi desenvolvido durante o curso de **CSS Flexbox** da [Origamid](https://www.origamid.com/). Utilizando apenas as **propriedades do flexbox** do **CSS3**, foi criado um design inteiramente responsivo para todas as telas. Além disso, estou buscando implementar algumas modificações com o **JavaScript** para melhor andamento do projeto, como um scroll mais limpo para links internos e um *dark mode*, que mude as cores de todo o site para seu oposto mais escuro.
+This project was developed during the **CSS Flexbox** course of [Origamid](https://www.origamid.com/). Using only the **properties of the **CSS3* flexbox**, a fully responsive design has been created for all screens. In addition, I’m looking to implement some modifications with **Javascript** for better project progress, such as a cleaner scroll for internal links and a *dark mode*, which changes the colors of the entire site to its darkest opposite.
 
 ## Começar
 ```
