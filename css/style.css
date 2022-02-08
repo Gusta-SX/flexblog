@@ -5,7 +5,8 @@ body, h1, h2, p, ul, li, a {
 }
 body {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
-  color: #222222;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 ul {
   list-style: none;
@@ -21,10 +22,22 @@ img {
   box-sizing: border-box;
   font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
+:root {
+  --primary-color: #e8e8e8;
+  --secondary-color: #222222;
+  --terciary-color: #f7f7f7;
+
+}
+.dark-theme {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+  --terciary-color: #030012;
+}
+
 /* superinfo */
 .superinfo-bg {
   background: #122ab2;
-  color: white;
+  color: var(--primary-color);
 }
 .superinfo {
   max-width: 960px;
@@ -38,7 +51,10 @@ img {
   margin: 0 10px 10px 10px;
 }
 .superinfo a {
-  color: white;
+  color: var(--primary-color);
+}
+.superinfo-bg a:hover {
+  text-decoration: underline;
 }
 /* menu */
 .menu-bg {
@@ -54,12 +70,17 @@ img {
   align-items: center;
 }
 .menu a {
-  color: white;
+  color: var(--primary-color);
 }
 .menu-logo a {
   font-size: 2.25em;
   font-weight: bold;
   margin: 0 10px;
+}
+.menu-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 .menu-nav ul {
   display: flex;
@@ -72,6 +93,11 @@ img {
 }
 .menu-nav a:hover {
   color: #122ab2;
+}
+#icon {
+  width: 26px;
+  cursor: pointer;  
+  margin-left: 14px;
 }
 /* introction */
 .introduction {
@@ -129,7 +155,7 @@ img {
 .products-item h2 {
   font-size: 3em;
   color: #a4a4a4;
-  background: #f7f7f7;
+  background: var(--terciary-color);
   padding: 60px 20px;
 }
 .purple {
@@ -143,7 +169,7 @@ img {
 }
 /* price */
 .price {
-  background: #f7f7f7;
+  background: var(--terciary-color);
   padding: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +177,7 @@ img {
 }
 .price-item {
   flex: 1;
-  border: 4px solid white;
+  border: 4px solid var(--primary-color);
   padding: 20px;
   margin: 10px;
 }
@@ -169,8 +195,8 @@ img {
   font-weight: bold;
   font-size: 2.5em;
   padding: 10px 0 5px 0; 
-  border-top: 4px solid white;
-  border-bottom: 4px solid white;
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
 }
 .price-item sup {
   font-size: 1.5rem;
@@ -201,13 +227,22 @@ img {
   max-width: 300px;
   display: block;
   margin: 20px auto;
-  border: 4px solid;
-  color: #222222;
+  color: var(--secondary-color);
   text-transform: uppercase;
   font-weight: bold;
   padding: 15px 0;
   text-align: center;
+  transition: 0.5s;
+  background: var(--primary-color);
+  border-radius: 20px;
 }
+
+.price-item a:hover {
+  color: #fff;
+  background-color: #2c70ff;
+  box-shadow: #2c70ff 0px 0px 16px;
+}
+
 
 @media (max-width:700px) {
   .price .price-item:nth-child(3){
@@ -257,7 +292,7 @@ img {
 }
 /* newsletter */
 .newsletter {
-  background: #f7f7f7;
+  background: var(--terciary-color);
   padding: 60px calc((100% - 960px) / 2);
   display: flex;
   flex-wrap: wrap;
@@ -304,6 +339,16 @@ img {
   padding: 10px;
   margin: 0;
   border: 0;
+  transition: all .2s;
+}
+.newsletter-form button:hover {
+  background-color: #2137b8;
+}
+.newsletter-form input:hover, .newsletter-form input:focus {
+  border: 3px solid #2137b8;
+}
+.newsletter-form input:hover + button, .newsletter-form input:focus + button {
+  background-color: #2137b8;
 }
 @media (max-width: 600px) {
   .newsletter-form button {
@@ -322,4 +367,7 @@ img {
   text-align: center;
   font-size: 2em;
   color: #122ab2;
+}
+.footer p a {
+  text-decoration: underline;
 }
